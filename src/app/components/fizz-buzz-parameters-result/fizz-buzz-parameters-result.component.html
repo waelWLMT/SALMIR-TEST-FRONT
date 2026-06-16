@@ -1,0 +1,51 @@
+<div class="card h-100">
+
+
+  <div class="card-header">
+    FizzBuzz Result
+  </div>
+
+
+  <div class="card-body">
+
+
+    @if(results.length > 0) {
+
+
+      <ul class="list-group">
+
+
+        @for(item of results; track $index) {
+
+
+          <li class="list-group-item">
+
+            {{ item }}
+
+          </li>
+
+
+        }
+
+
+      </ul>
+
+
+    }
+    @else {
+
+
+      <div class="alert alert-secondary">
+
+        Aucun résultat disponible
+
+      </div>
+
+
+    }
+
+
+  </div>
+
+
+</div>

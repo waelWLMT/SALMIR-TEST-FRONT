@@ -1,0 +1,76 @@
+<div class="card">
+
+  <div class="card-header">
+    FizzBuzz Configuration
+  </div>
+
+
+  <div class="card-body">
+
+
+    <div class="row mb-3">
+
+      <div class="col">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Divisor"
+          [(ngModel)]="divisor">
+      </div>
+
+
+      <div class="col">
+
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Value"
+          [(ngModel)]="value">
+
+      </div>
+
+
+      <div class="col">
+
+        <button
+          class="btn btn-primary"
+          (click)="addRule()">
+
+          Add Rule
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="mb-3">
+
+      <label>
+        Limit
+      </label>
+
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="limit"
+        (ngModelChange)="emitFormChanged()">
+
+    </div>
+
+
+
+    <button
+      class="btn btn-success"
+      (click)="generateFizzBuzz()">
+
+      Generate
+
+    </button>
+
+
+  </div>
+
+</div>

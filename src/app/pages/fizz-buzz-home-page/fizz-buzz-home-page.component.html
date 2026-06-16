@@ -1,0 +1,30 @@
+<div class="container mt-5">
+
+  <div class="row align-items-stretch">
+
+    <!-- Formulaire -->
+    <div class="col-md-6">
+      <app-fizz-buzz-parameters-form (generate)="onGenerate($event)" (formChanged)="onFormChanged($event)"></app-fizz-buzz-parameters-form>
+    </div>
+
+    <!-- Details -->
+    <div class="col-md-6">
+      <app-fizz-buzz-parameters-details [request]="request"></app-fizz-buzz-parameters-details>
+    </div>
+
+  </div>
+
+
+  <div class="row mt-4">
+
+  <div class="col-12">
+
+    <app-fizz-buzz-parameters-result
+    [results]="results">
+    </app-fizz-buzz-parameters-result>
+
+  </div>
+
+</div>
+
+  </div>

@@ -1,0 +1,58 @@
+<div class="card mt-4">
+
+  <div class="card-header">
+    FizzBuzz Parameters
+  </div>
+
+
+  <div class="card-body">
+
+
+    @if(request) {
+
+
+      <p>
+        <strong>Limit :</strong>
+        {{ request.limit }}
+      </p>
+
+
+      <p>
+        <strong>Rules :</strong>
+      </p>
+
+
+      <ul class="list-group">
+
+        @for(rule of request.divisors | keyvalue; track rule.key) {
+
+          <li class="list-group-item">
+
+            {{ rule.key }}
+            =>
+            {{ rule.value }}
+
+          </li>
+
+        }
+
+      </ul>
+
+
+    }
+    @else {
+
+
+      <div class="alert alert-secondary">
+
+        Le request n'est pas encore prêt
+
+      </div>
+
+
+    }
+
+
+  </div>
+
+</div>
