@@ -1,0 +1,7 @@
+services:
+  frontend-fizzbuzz:
+    build: ./
+    container_name: fizzbuzz_web-app    
+    ports:
+      - 5000:80
+    restart: unless-stopped
