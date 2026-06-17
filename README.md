@@ -1,27 +1,101 @@
-# FizzBuzzFrontend
+# FizzBuzz Frontend - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Application frontend Angular permettant de consommer l'API FizzBuzz Backend.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Prérequis
 
-## Code scaffolding
+Avant de lancer l'application, il faut avoir installé :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Node.js
+* npm
+* Docker
+* Docker Compose
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Utilisation du projet
 
-## Running unit tests
+## 1. Télécharger le projet
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Cloner le repository Git :
 
-## Running end-to-end tests
+```bash
+git clone <repository-url>
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Accéder au dossier du projet :
 
-## Further help
+```bash
+cd <nom-du-projet>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## 2. Configuration de l'application
+
+Avant de lancer l'application, mettre à jour les fichiers de configuration Angular :
+
+```text
+src/environments/
+
+├── environment.development.ts
+└── environment.ts
+```
+
+Modifier la variable :
+
+```typescript
+apiUrl
+```
+
+avec l'adresse correspondante de l'API Backend.
+
+Exemple :
+
+```typescript
+export const environment = {
+
+  production: false,
+
+  apiUrl: "https://localhost:7245/api"
+
+};
+```
+
+---
+
+## 3. Lancer l'application en local
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Démarrer l'application :
+
+```bash
+npm start
+```
+
+L'application sera accessible via :
+
+```text
+http://localhost:4200
+```
+
+---
+
+# Déploiement avec Docker
+
+Depuis le dossier du projet :
+
+```bash
+docker compose up
+```
+
+Docker va construire et démarrer l'application.
+
+L'application sera accessible via l'URL configurée dans le fichier `docker-compose.yml`.
