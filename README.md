@@ -98,4 +98,6 @@ docker compose up
 
 Docker va construire et démarrer l'application.
 
-L'application sera accessible via l'URL configurée dans le fichier `docker-compose.yml`.
+L'application sera accessible via l'URL configurée dans le fichier `compose.yml`.
+
+Au cas ou la page de nginx s'affiche il faut juste Ctr + Maj + R cela va vider le cache forcé et ca va tourner
